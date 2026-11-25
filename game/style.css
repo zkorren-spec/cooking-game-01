@@ -1,0 +1,42 @@
+/* Yatai Rush — page frame. The game itself is 100% canvas. */
+* { box-sizing: border-box; }
+html, body {
+  margin: 0;
+  padding: 0;
+  background: #1B1F3B;
+  min-height: 100vh;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  padding: 0;
+}
+canvas#game {
+  display: block;
+  width: min(1280px, 100vw);
+  height: auto;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+  background: #1B1F3B;
+  cursor: pointer;
+}
+p.hint {
+  margin: 10px 0 0;
+  font: 700 14px 'Trebuchet MS', 'Segoe UI', sans-serif;
+  color: rgba(250, 243, 224, 0.65);
+  text-align: center;
+}
+
+canvas#game:focus-visible {
+  outline: 3px solid #F4A922;
+  outline-offset: 3px;
+}
+
+@media (max-width: 700px) {
+  p.hint { font-size: 11px; }
+}
